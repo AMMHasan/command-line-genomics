@@ -4,7 +4,7 @@
 
 <img scr="./NGS_workflow.png" \>
 
-¡[](./NGS_workflow.png)
+![steps](./NGS_workflow.png)
 
 1. Downloading sequence files
 2. Downloading Reference genome file
