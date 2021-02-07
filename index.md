@@ -96,7 +96,9 @@ picard MarkDuplicates I=/data/result/sorted_sample.bam O=/data/result/deduped_sa
 samtools index /data/result/deduped_sample.bam
 ```
 ## 9. Mutation detection from deduplicated-sorted BAM
-Mutation is detected from the sample anlignment file using `Platypus`. It's worth mentioning that the mutations found here are the variants found when compared to the reference genome. The output will be given in `.vcf` format. Detection of meaningful somatic mutations are out of the scope of this workshop -
+Mutation is detected from the sample anlignment file using `Platypus`. Detailed manual of `Platypus` can be found following this [link.](https://www.well.ox.ac.uk/research/research-groups/lunter-group/lunter-group/platypus-a-haplotype-based-variant-caller-for-next-generation-sequence-data)
+
+It's worth mentioning that the mutations found here are the variants found when compared to the reference genome, not only somatic mutations. The output will be given in `.vcf` format. Detection of meaningful somatic mutations are out of the scope of this workshop -
 
 ```
 platypus callVariants -o /data/result/vatiants.vcf --refFile /data/ref_genome/chrX.fa --bamFiles /data/result/deduped_sample.bam
