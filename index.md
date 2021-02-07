@@ -2,8 +2,6 @@
 
 ## Wrokflow:
 
-<img scr="./NGS_workflow.png" \>
-
 ![steps](./NGS_workflow.png)
 
 1. Downloading sequence files
