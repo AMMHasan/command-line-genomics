@@ -101,6 +101,10 @@ Mutation is detected from the sample anlignment file using `Platypus`. Detailed 
 It's worth mentioning that the mutations found here are the variants found when compared to the reference genome, not only somatic mutations. The output will be given in `.vcf` format. Detection of meaningful somatic mutations are out of the scope of this workshop -
 
 ```
+cd ./ref_genome
+samtools faidx chrX.fa
+cd ..
+
 platypus callVariants -o /data/result/vatiants.vcf --refFile /data/ref_genome/chrX.fa --bamFiles /data/result/deduped_sample.bam
 ```
 ## 10. Visualisation of mutations
