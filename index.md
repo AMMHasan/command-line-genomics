@@ -73,7 +73,7 @@ Pair-end sequence files are now mapped to the reference genome. The output is in
 
 ```
 cd ..
-bwa mem -M ./ref_genome/chrX.fa ./seq_data/sample_R1.fq ./seq_data/sample_R2.fq > ./seq_data/result/unsorted_sample.sam
+bwa mem -M ./ref_genome/chrX.fa ./seq_data/sample_R1.fq ./seq_data/sample_R2.fq > ./result/unsorted_sample.sam
 ls result
 ```
 ## 6. Converting SAM to BAM file
