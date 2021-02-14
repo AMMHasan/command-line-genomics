@@ -80,7 +80,7 @@ ls result
 As `.sam` format is a big text file to deal with, for computational purpose, it is converted into a binary format `.bam`. This is machine readable format, not human readable at all.
 
 ```
-samtools view -S -b ./results/unsorted_sample.sam  > /data/result/unsorted_sample.bam
+samtools view -S -b ./result/unsorted_sample.sam  > /data/result/unsorted_sample.bam
 ```
 ## 7. Sorting BAM file
 Now, the reads are sorted in the alignment file -
