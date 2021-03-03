@@ -32,6 +32,7 @@ mkdir -p result
 ## 1. Downloading sequence files
 Let's download the downsampled, anonymised whole genome sequencing data in [fastq](https://samtools.github.io/hts-specs/SAMv1.pdf) format and save in the `seq_data` directory - 
 ```
+# You are now in "/data" directory 
 cd seq_data
 # You are now in "/data/seq_data" directory 
 git clone https://github.com/AMMHasan/BioTED_Genomics_sampleR1.fq.git
@@ -44,6 +45,7 @@ rm -r BioTED_Genomics_sampleR*
 ## 2. Downloading Reference genome file
 Now, download the reference genome (chrX from hg19) from public repository. This may take few minutes depending your internet connection. The file is downloaded as compressed (`.gz`) format, you need to decompress it using `gunzip` commad.
 ```
+# You are now in "/data/seq_data" directory 
 cd ../ref_genome
 # You are now in "/data/ref_genome" directory 
 wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/chromosomes/chrX.fa.gz
@@ -55,6 +57,7 @@ less chrX.fa
 Before mapping the sequences to the reference genome, we need to perform some QC on the sequence file to check the overall quality and some other parameters.
 
 ```
+# You are now in "/data/ref_genome" directory
 cd ../seq_data/
 # You are now in "/data/seq_data" directory 
 fastqc sample_R1.fq
@@ -68,6 +71,7 @@ head fastqc_data.txt
 One more thing we need to perform before mapping is to index the reference genome. The reason for indexing will be discussed in the lecture.
 
 ```
+# You are now in "/data/seq_data" directory 
 cd ../../ref_genome
 # You are now in "/data/ref_genome" directory 
 bwa index chrX.fa
@@ -77,6 +81,7 @@ ls
 Pair-end sequence files are now mapped to the reference genome. The output is in `.sam` (Sequence Alignment Map) format.
 
 ```
+# You are now in "/data/ref_genome" directory 
 cd ..
 # You are now in "/data" directory 
 bwa mem -M ./ref_genome/chrX.fa ./seq_data/sample_R1.fq ./seq_data/sample_R2.fq > ./result/unsorted_sample.sam
