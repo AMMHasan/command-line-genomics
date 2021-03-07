@@ -121,7 +121,7 @@ cd ./ref_genome
 samtools faidx chrX.fa
 cd ..
 # You are now in "/data" directory 
-platypus callVariants -o /data/result/vatiants.vcf --refFile /data/ref_genome/chrX.fa --bamFiles /data/result/deduped_sample.bam
+platypus callVariants -o /data/result/variants.vcf --refFile /data/ref_genome/chrX.fa --bamFiles /data/result/deduped_sample.bam
 ```
 ## 10. Visualisation of mutations
 Now, we will viuslise the mutations on [IGV](https://igv.org/app/).
