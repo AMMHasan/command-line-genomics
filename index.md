@@ -1,4 +1,4 @@
-# Command-line Genomics: Day2
+# Cancer Genomics
 
 ## Wrokflow:
 
